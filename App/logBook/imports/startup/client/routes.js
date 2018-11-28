@@ -4,6 +4,7 @@ import { BlazeLayout } from 'meteor/kadira:blaze-layout';
 // Import needed templates
 import '../../ui/layouts/body/body.js';
 import '../../ui/layouts/header/Header.js';
+import '../../ui/layouts/footer/Footer.js';
 import '../../ui/pages/home/home.js';
 import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/About_Page/About.js'; //import the path to the js file that imports the needed HTML file!
@@ -39,6 +40,7 @@ FlowRouter.route('/Login', {
     BlazeLayout.render('App_body', { main: 'Login_Form' });
   },
 });
+
 
 FlowRouter.notFound = {
   action() {

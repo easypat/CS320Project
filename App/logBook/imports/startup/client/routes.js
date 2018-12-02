@@ -10,6 +10,7 @@ import '../../ui/pages/not-found/not-found.js';
 import '../../ui/pages/About_Page/About.js'; //import the path to the js file that imports the needed HTML file!
 import '../../ui/pages/CreateAccount/Create.js';
 import '../../ui/pages/Login/auth.js';
+import '../../ui/pages/Passwords/index.js';
 
 // Set up all routes in the app
 FlowRouter.route('/junk', {
@@ -41,6 +42,12 @@ FlowRouter.route('/Login', {
   },
 });
 
+FlowRouter.route('/Account', {
+  name: 'Passwords',
+  action() {
+    BlazeLayout.render('App_body', { main: 'Passwords' });
+  },
+});
 
 FlowRouter.notFound = {
   action() {

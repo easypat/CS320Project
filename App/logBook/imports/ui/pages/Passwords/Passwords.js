@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import { Stuff } from '../../api/stuff/stuff.js';
+import { Users } from '../../api/userinfo/userinfo.js';
 
 Template.Passwords.helpers({
 
@@ -7,6 +7,6 @@ Template.Passwords.helpers({
    * @returns {*} All of the Stuff documents.
    */
   usersList() {
-    return Stuff.find();
+    return Users.find();
   },
 });

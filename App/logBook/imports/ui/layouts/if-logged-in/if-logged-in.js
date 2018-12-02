@@ -1,6 +1,7 @@
 import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 
+
 /* eslint-disable object-shorthand */
 
 Template.If_Logged_In.helpers({
@@ -16,4 +17,5 @@ Template.If_Logged_In.helpers({
   canShow: function canShow() {
     return !!Meteor.user();
   },
+
 });

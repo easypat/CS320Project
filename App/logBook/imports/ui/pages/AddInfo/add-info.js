@@ -12,7 +12,7 @@ import { Users } from '../../../api/userinfo/userinfo.js';
 AutoForm.hooks({
   AddInfoForm: {
     /**
-     * After successful form submission, go to List_Stuff_Page.
+     * After successful form submission, go to Account.
      * @param formType The form.
      * @param result The result of form submission.
      */

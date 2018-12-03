@@ -11,6 +11,7 @@ import '../../ui/pages/About_Page/About.js'; //import the path to the js file th
 import '../../ui/pages/CreateAccount/Create.js';
 import '../../ui/pages/Login/auth.js';
 import '../../ui/pages/Passwords/index.js';
+import '../../ui/pages/AddInfo/index.js';
 
 // Set up all routes in the app
 FlowRouter.route('/junk', {
@@ -39,6 +40,13 @@ FlowRouter.route('/Login', {
   name: 'Login_Form',
   action() {
     BlazeLayout.render('App_body', { main: 'Login_Form' });
+  },
+});
+
+FlowRouter.route('/addInfo', {
+  name: 'Add_Info_Page',
+  action() {
+    BlazeLayout.render('App_body', { main: 'Add_Info_Page' });
   },
 });
 

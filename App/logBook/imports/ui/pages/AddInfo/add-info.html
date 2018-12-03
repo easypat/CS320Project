@@ -1,0 +1,20 @@
+<template name="Add_Info_Page">
+    <div style="padding-top: 20px" class="ui text container">
+      <h4>Add Account Information</h4>
+      <div class="ui divider"></div>
+      {{#autoForm collection=usersCollection id="AddInfoForm" type="insert"}}
+        <div class="ui four column grid">
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='service'}}</div>
+          </div>
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='user'}}</div>
+          </div>
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='password'}}</div>
+          </div>
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+      {{/autoForm}}
+    </div>
+</template>

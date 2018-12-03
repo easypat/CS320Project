@@ -1,0 +1,1 @@
+import './add-info.html';

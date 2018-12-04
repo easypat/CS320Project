@@ -1,5 +1,5 @@
 import { Template } from 'meteor/templating';
-import { Users } from '../../api/userinfo/userinfo.js';
+import { Users } from '../../../api/userinfo/userinfo.js';
 
 Template.Passwords.helpers({
 

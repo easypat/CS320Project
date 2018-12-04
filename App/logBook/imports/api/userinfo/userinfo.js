@@ -16,7 +16,7 @@ export const UsersSchema = new SimpleSchema({
     max: 20,
     autoform: {
       group: 'Users',
-      placeholder: 'Service',
+      placeholder: 'Service (example gmail)',
     },
   },
 

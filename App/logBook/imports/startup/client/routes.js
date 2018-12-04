@@ -12,6 +12,7 @@ import '../../ui/pages/CreateAccount/Create.js';
 import '../../ui/pages/Login/auth.js';
 import '../../ui/pages/Passwords/index.js';
 import '../../ui/pages/AddInfo/index.js';
+import '../../ui/pages/AddInfo/add-info.js';
 
 // Set up all routes in the app
 FlowRouter.route('/junk', {

@@ -17,7 +17,7 @@ AutoForm.hooks({
      * @param result The result of form submission.
      */
     onSuccess: function onSuccess(formType, result) {
-      FlowRouter.go('Account');
+      FlowRouter.go('Passwords');
     },
   },
 });

@@ -52,7 +52,7 @@ FlowRouter.route('/addInfo', {
   },
 });
 
-FlowRouter.route('/editInfo', {
+FlowRouter.route('/editInfo/:_id', {
   name: 'Edit_Info_Page',
   action() {
     BlazeLayout.render('App_body', { main: 'Edit_Info_Page' });

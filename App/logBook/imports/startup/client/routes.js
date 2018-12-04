@@ -13,6 +13,7 @@ import '../../ui/pages/Login/auth.js';
 import '../../ui/pages/Passwords/index.js';
 import '../../ui/pages/AddInfo/index.js';
 import '../../ui/pages/AddInfo/add-info.js';
+import '../../ui/pages/EditPasswords/index.js';
 
 // Set up all routes in the app
 FlowRouter.route('/junk', {
@@ -48,6 +49,13 @@ FlowRouter.route('/addInfo', {
   name: 'Add_Info_Page',
   action() {
     BlazeLayout.render('App_body', { main: 'Add_Info_Page' });
+  },
+});
+
+FlowRouter.route('/editInfo', {
+  name: 'Edit_Info_Page',
+  action() {
+    BlazeLayout.render('App_body', { main: 'Edit_Info_Page' });
   },
 });
 

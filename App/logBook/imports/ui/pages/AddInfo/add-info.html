@@ -64,7 +64,14 @@
         }
       };
     </script>
+    <script>
+      function copy() {
+        let textarea = document.getElementById("p");
+        textarea.select();
+        document.execCommand("copy");
+      }
+    </script>
     <input type='text' id='p'/><br/>
-    <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16)'>
+    <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16); copy()'>
   </div>
 </template>

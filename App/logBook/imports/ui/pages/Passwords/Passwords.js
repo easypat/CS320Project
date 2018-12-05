@@ -9,4 +9,7 @@ Template.Passwords.helpers({
   usersList() {
     return Users.find();
   },
+  isOwner() {
+    return this.owner === Meteor.userId();
+  },
 });

@@ -5,6 +5,13 @@ import { SimpleSchema } from 'meteor/aldeed:simple-schema';
 
 export const Users = new Mongo.Collection('Users');
 
+if (Meteor.isServer) {
+  // This code only runs on the server
+  Meteor.publish('users', function usersPublication() {
+    return Users.find();
+  });
+}
+
 /**
  * Create the schema for Users
  */

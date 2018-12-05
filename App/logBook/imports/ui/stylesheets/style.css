@@ -23,8 +23,24 @@
   text-align: center;
 }
 
-.ui.button{
+.ui.container.genbox {
+  margin-top: 70px;
+}
+
+.ui.button {
   float: right;
+  margin-top: 20px;
+  margin-bottom: 20px;
+}
+
+.ui.button.center {
+  float: initial;
+  margin-top: 10px;
+}
+
+[data-required] label:after {
+  content: ' *';
+  color: red;
 }
 
 footer {

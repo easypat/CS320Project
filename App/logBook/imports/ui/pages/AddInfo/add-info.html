@@ -1,16 +1,70 @@
 <template name="Add_Info_Page">
-
-    <div style="padding-top: 20px" class="ui container">
-{{#if currentUser}}
-      {{> quickForm
-          collection=usersCollection
-          template="semanticUI"
-          id="AddInfoForm"
-          type="insert"
-          resetOnSuccess=true}}
-  {{else}}
-    <h1 class="Not_logged_in">Please Log in first</h1>
-  {{/if}}
+    <div style="padding-top: 20px" class="ui text container">
+      <h4>Account Information</h4>
+      <div class="ui divider"></div>
+      {{#autoForm collection=usersCollection id="AddInfoForm" type="insert"}}
+        <div class="ui four column grid">
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='service'}}</div>
+          </div>
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='user'}}</div>
+          </div>
+          <div class="one column row">
+            <div class="column">{{> afQuickField name='password'}}</div>
+          </div>
+        </div>
+        <button type="submit" class="ui button">Submit</button>
+      {{/autoForm}}
     </div>
+  <div class="ui center aligned container genbox">
+    <script>
+      var Password = {
 
+        _pattern : /[a-zA-Z0-9_\-\+\.]/,
+
+
+        _getRandomByte : function()
+        {
+          // http://caniuse.com/#feat=getrandomvalues
+          if(window.crypto && window.crypto.getRandomValues)
+          {
+            var result = new Uint8Array(1);
+            window.crypto.getRandomValues(result);
+            return result[0];
+          }
+          else if(window.msCrypto && window.msCrypto.getRandomValues)
+          {
+            var result = new Uint8Array(1);
+            window.msCrypto.getRandomValues(result);
+            return result[0];
+          }
+          else
+          {
+            return Math.floor(Math.random() * 256);
+          }
+        },
+
+        generate : function(length)
+        {
+          return Array.apply(null, {'length': length})
+              .map(function()
+              {
+                var result;
+                while(true)
+                {
+                  result = String.fromCharCode(this._getRandomByte());
+                  if(this._pattern.test(result))
+                  {
+                    return result;
+                  }
+                }
+              }, this)
+              .join('');
+        }
+      };
+    </script>
+    <input type='text' id='p'/><br/>
+    <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16)'>
+  </div>
 </template>

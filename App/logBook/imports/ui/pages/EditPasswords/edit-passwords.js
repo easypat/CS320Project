@@ -1,7 +1,7 @@
 import { AutoForm } from 'meteor/aldeed:autoform';
 import { FlowRouter } from 'meteor/kadira:flow-router';
 import { Template } from 'meteor/templating';
-import { Stuff } from '../../../api/userinfo/userinfo.js';
+import { Users } from '../../../api/userinfo/userinfo.js';
 
 /* eslint-disable object-shorthand, no-unused-vars */
 
@@ -26,7 +26,7 @@ Template.Edit_Info_Page.helpers({
   getDoc() {
     return Users.findOne(FlowRouter.getParam('_id'));
   },
-  stuffCollection() {
+  usersCollection() {
     return Users;
   },
 });

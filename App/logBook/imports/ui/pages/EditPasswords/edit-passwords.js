@@ -30,4 +30,3 @@ Template.Edit_Info_Page.helpers({
     return Users;
   },
 });
-

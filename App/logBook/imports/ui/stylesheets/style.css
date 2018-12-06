@@ -1,4 +1,5 @@
 
+
 .copyright{
   padding-top: 250px;
   text-align: center;
@@ -43,4 +44,7 @@ footer {
 
 .div.ui.four.column.grid{
   margin-bottom:25px;
+}
+.login-link-text{
+  color: black !important;
 }

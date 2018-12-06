@@ -13,8 +13,14 @@
           <div class="one column row">
             <div class="column">{{> afQuickField name='password'}}</div>
           </div>
+          <div class="two column row">
+            <div class="one column"><input type='text' id='p'/>
+            <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16); copy()'>
+            </div>
+              <div class="column"><button type="submit" class="ui button">Submit</button></div>
+          </div>
         </div>
-        <button type="submit" class="ui button">Submit</button>
+
       {{/autoForm}}
     </div>
   <div class="ui center aligned container genbox">
@@ -71,7 +77,6 @@
         document.execCommand("copy");
       }
     </script>
-    <input type='text' id='p'/><br/>
-    <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16); copy()'>
+
   </div>
 </template>

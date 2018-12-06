@@ -1,41 +1,22 @@
-.header{
-  padding-top:20px;
-  padding-bottom: 50px;
-}
-.sign-up{
-  text-align: center;
-  padding-top: 20px;
-}
-.headings {
-  margin-left: 200px;
-  margin-right: 200px;
-  margin-top: 40px;
-  margin-bottom: 10px;
-}
-.text-content {
-  margin-left: 200px;
-  margin-right: 600px;
-  margin-top: 10px;
-  margin-bottom: 10px;
-}
+
 .copyright{
   padding-top: 250px;
   text-align: center;
 }
 
-.ui.container.genbox {
-  margin-top: 70px;
-}
+
 
 .ui.button {
   float: right;
-  margin-top: 20px;
+  margin-top: 40px;
   margin-bottom: 20px;
+
 }
 
 .ui.button.center {
   float: initial;
   margin-top: 10px;
+
 }
 
 [data-required] label:after {
@@ -45,14 +26,21 @@
 
 footer {
   margin-top: 50px;
+  background-color: #720000;
+  color: white;
+  height:fit-content;
+  box-shadow: 0 50vh 0 50vh #720000;
+  font-size: large;
+  padding-bottom: 25px;
 }
 
 .delete {
-  float: right;
-  font-weight: bold;
   background: none;
   font-size: 1em;
   border: none;
   position: relative;
 }
+
+.div.ui.four.column.grid{
+  margin-bottom:25px;
 }

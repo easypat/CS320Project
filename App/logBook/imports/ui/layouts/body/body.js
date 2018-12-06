@@ -1,5 +1,5 @@
 import './body.html';
 
 Template.body.onCreated( function bodyOnCreated() {
-  Meteor.subscribe('users');
+  Meteor.subscribe('Users');
 });

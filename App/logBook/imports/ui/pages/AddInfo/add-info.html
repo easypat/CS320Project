@@ -1,5 +1,6 @@
 <template name="Add_Info_Page">
     <div style="padding-top: 20px" class="ui text container">
+
       <h4>Account Information</h4>
       <div class="ui divider"></div>
       {{#autoForm collection=usersCollection id="AddInfoForm" type="insert"}}
@@ -13,12 +14,22 @@
           <div class="one column row">
             <div class="column">{{> afQuickField name='password'}}</div>
           </div>
+
           <div class="two column row">
             <div class="one column"><input type='text' id='p'/>
+              <table>
+                <tr>
+                  <td>
             <input type='button' class="ui button center" value ='Gen Password' onclick='document.getElementById("p").value = Password.generate(16); copy()'>
+                  </td>
+                  <td>
+                    <div class="column"><button type="submit" style="float:right" class="ui button center">Submit</button></div>
+                  </td>
+                </tr>
+              </table>
             </div>
-              <div class="column"><button type="submit" class="ui button">Submit</button></div>
-          </div>
+            </div>
+
         </div>
 
       {{/autoForm}}
@@ -77,6 +88,5 @@
         document.execCommand("copy");
       }
     </script>
-
   </div>
 </template>

@@ -19,7 +19,7 @@ if (Meteor.isServer) {
  */
 Meteor.methods({
   'users.remove'(userID) {
-    check(userID, String);
+    //check(userID, String);
 
     Users.remove(userID);
   },

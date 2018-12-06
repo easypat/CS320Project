@@ -1,3 +1,4 @@
+import { Meteor } from 'meteor/meteor';
 import { Template } from 'meteor/templating';
 import { Users } from '../../../api/userinfo/userinfo.js';
 
@@ -11,5 +12,11 @@ Template.Passwords.helpers({
   },
   isOwner() {
     return this.owner === Meteor.userId();
+  },
+});
+
+Template.Passwords.events({
+  'click .delete'() {
+    Users.remove(this._id);
   },
 });

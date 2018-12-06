@@ -10,7 +10,7 @@ export const Users = new Mongo.Collection('Users');
 if (Meteor.isServer) {
   // This code only runs on the server
   Meteor.publish('Users', function usersPublication() {
-    return Users.find();
+    return Users.find({id:this.userId});
   });
 }
 

@@ -1,18 +1,21 @@
 <template name="header">
   <meta charset="UTF-8">
   <title>HotLogBook</title>
+  <link rel="stylesheet" href="style.css">
+  <div class="main_container" style="background-color: #F95959">
+    <img class="ui centered image" src="coverShrinkage.png">
+  </div>
+  <link rel="stylesheet" href="https://fonts.googleapis.com/css?family=Oswald&effect=fire-animation">
   <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.css">
   <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.3.1/jquery.min.js"></script>
   <script type="text/javascript"
           src="https://cdnjs.cloudflare.com/ajax/libs/semantic-ui/2.3.3/semantic.min.js"></script>
- <link rel="stylesheet" href="style.css">
 
-  <img class="ui fixed fluid image" src="../../../../public/img/facebook_cover_photo_2.png">
-  <div class="ui four item menu">
+  <div class="ui three item menu" style="margin-top:0">
+
     <a class="item" href="/">About Us</a>
     <a class="item" href="Account">Account Information</a>
     <!--<a class="item" href="Login">Login</a>-->
-    <a class="item" href="createAccount">Create New Account</a>
     <a href="#" class="right aligned item">{{> loginButtons align="right"}} </a>
       </div>
 </template>
